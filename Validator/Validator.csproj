@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows7.0</TargetFramework>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Itboy</RootNamespace>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWindowsForms>true</UseWindowsForms>
+		<ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <Title>Itboy.Validator</Title>
+    <Version>1.0.1</Version>
+    <RepositoryUrl>https://github.com/Avaruz/itboy_validator</RepositoryUrl>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageId>Itboy.Validator</PackageId>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Update="Components\Validator\ValidationInfo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Components\Validator\Validator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <EmbeddedResource Include="Components\Validator\Toolbox.ico" />
+  </ItemGroup>
+</Project>
